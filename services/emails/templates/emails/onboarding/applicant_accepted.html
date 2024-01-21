@@ -1,0 +1,19 @@
+{% extends 'emails/base.html' %}
+
+{% block content %}
+    Dear {{ obj }},
+
+
+    <p>Congratulations! Your account has been created successfully.</p>
+    <p>Thank you for joining our platform. You can now log in with your credentials and access your account.</p>
+    <p>If you have any questions or need assistance, please feel free to reach out to us.</p>
+
+    <p><strong>Accounts Details:</strong></p>
+    <ul>
+        <li><strong>Name:</strong> {{ obj }}</li>
+        <li><strong>Email:</strong> {{ obj.email }}</li>
+        <li><strong>Password:</strong> {{ password }}</li>
+    </ul>
+    <p>Please review the application and take the necessary actions.</p>
+    
+{% endblock %}

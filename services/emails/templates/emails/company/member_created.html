@@ -1,0 +1,21 @@
+{% extends 'emails/base.html' %}
+
+{% block content %}
+    Dear {{ obj.user }},
+
+    <p>Congratulations! Your account has been registered on <b>FLD</b> as a member of {{ obj.shop }}.</p>
+    <p>Thank you for joining our platform. You can now log in with your credentials and access your organizational account.</p>
+    <p>If you have any questions or need assistance, please feel free to reach out to us.</p>
+
+    <p><strong>Accounts Details:</strong></p>
+    <ul>
+        <li><strong>Organization:</strong> {{ obj.shop }}</li>
+        <li><strong>Access Role:</strong> {{ obj.member_type }}</li>
+        <li><strong>Username:</strong> {{ obj.user.username }}</li>
+        <li><strong>Email:</strong> {{ obj.user.email }}</li>
+        <li><strong>Password:</strong> {{ password }}</li>
+    </ul>
+
+    <p>Please review the application and take the necessary actions.</p>
+
+{% endblock %}

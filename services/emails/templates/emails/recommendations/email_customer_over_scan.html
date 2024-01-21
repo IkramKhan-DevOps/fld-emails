@@ -1,0 +1,51 @@
+{% extends 'emails/base.html' %}
+
+{% block content %}
+    <h2>Dear {{ obj }}!</h2>
+
+    <h4>We hope this message finds you well! 🌟</h4>
+    <p>
+        We wanted to express our gratitude for choosing our services and recently scanning your hand. As a valued member
+        of our community.
+    </p>
+    <p>
+        we're excited to share some exclusive benefits that await you:
+    </p>
+
+    <ul>
+        <li>
+            <b>Personalized Recommendations:</b> Your hand scan has allowed us to tailor our offerings just for you.
+            Discover
+            products
+            and services that match your unique preferences.
+        </li>
+        <li>
+            <b>Early Access to New Arrivals:</b> Be the first to explore our latest arrivals and innovations. Stay ahead
+            of the
+            curve
+            with exclusive early access.
+        </li>
+        <li>
+            <b>Special Discounts and Promotions: </b>
+            Enjoy member-only discounts and promotions, crafted especially for you. Keep an
+            eye on your inbox for limited-time offers!
+        </li>
+    </ul>
+    <p>
+        Remember, your satisfaction is our priority, and we're here to enhance your experience with us. Should you have
+        any questions or need assistance, feel free to reply to this email or contact our customer support.
+    </p>
+    <p>
+        Thank you for being a part of our community. We look forward to continuing this journey with you!
+    </p>
+
+    <h4>{{ obj.shop.name }}</h4>
+    {% if obj.shop.address %}
+        {<h4>{{ obj.shop.address }}</h4>
+    {% endif %}
+    <h4>
+        <a href="tel:{{ obj.shop.email }}">{{ obj.shop.email }}</a> - <a
+            href="tel:{{ obj.shop.phone }}">{{ obj.shop.phone }}</a>
+    </h4>
+
+{% endblock %}

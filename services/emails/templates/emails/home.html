@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous"
+    >
+    <title>FLD EMAIL (APP)</title>
+  </head>
+
+  <body>
+
+  <div class="m-5 container">
+      <div class="">
+          <div class="mb-5 text-center">
+              <img height="120" src='https://fldai.org/static/email_logo.png'/>
+          </div>
+          <div class="table-responsive">
+              <table class="table table-hover">
+                  <thead class="table-dark">
+                  <tr>
+                      <th scope="col">Action</th>
+                      <th scope="col">Template</th>
+                      <th scope="col">Link</th>
+                  </thead>
+                    <tbody>
+                    <tr>
+                        <td>New Applicant</td>
+                        <td>applicant_created.html</td>
+                        <td><a href="{% url 'emails:applicant_created' %}">view</a></td>
+                    </tr>
+                    <tr>
+                        <td>Applicant Accepted</td>
+                        <td>applicant_accepted.html</td>
+                        <td><a href="{% url 'emails:applicant_accepted' %}">view</a></td>
+                    </tr>
+                    <tr>
+                        <td>Added to Waitlist</td>
+                        <td>waitlist_created.html</td>
+                        <td><a href="{% url 'emails:waitlist_created' %}">view</a></td>
+                    </tr>
+                    <tr>
+                        <td>Member Created</td>
+                        <td>member_created.html</td>
+                        <td><a href="{% url 'emails:member_created' %}">view</a></td>
+                    </tr>
+                    <tr>
+                        <td>Client on Hand Scan</td>
+                        <td>email_customer_over_scan.html</td>
+                        <td><a href="{% url 'emails:recommendation_on_scan' %}">view</a></td>
+                    </tr>
+                    <tr>
+                        <td>Subscription Created</td>
+                        <td>subscription_create.html</td>
+                        <td><a href="{% url 'emails:subscription_created' %}">view</a></td>
+                    </tr>
+                    <tr>
+                        <td>Subscription Updated</td>
+                        <td>subscription_update.html</td>
+                        <td><a href="{% url 'emails:subscription_update' %}">view</a></td>
+                    </tr>
+                    </tbody>
+              </table>
+          </div>
+      </div>
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous">
+    </script>
+  </body>
+
+</html>
